@@ -1,0 +1,18 @@
+{
+  "notes": [
+    {
+      "id": "040_E2_S6F0",
+      "note": "E2",
+      "string": 6,
+      "fret": 0,
+      "file": "040_E2_S6F0.wav"
+    },
+    {
+      "id": "041_F2_S6F1",
+      "note": "F2",
+      "string": 6,
+      "fret": 1,
+      "file": "041_F2_S6F1.wav"
+    }
+  ]
+}
