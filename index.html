@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guitar Ear Trainer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="trainer-card">
+        <header class="trainer-header">
+          <h1>Guitar Ear Trainer</h1>
+          <div class="level-badge">
+            <span>Level</span>
+            <strong id="level">1</strong>
+          </div>
+        </header>
+
+        <div class="fretboard-display">
+          <div class="fretboard-slot">
+            <span class="fret-label">String</span>
+            <strong id="current-string">—</strong>
+          </div>
+          <div class="fretboard-slot">
+            <span class="fret-label">Fret</span>
+            <strong id="current-fret">—</strong>
+          </div>
+          <div class="fretboard-slot">
+            <span class="fret-label">Note</span>
+            <strong id="current-note">?</strong>
+          </div>
+        </div>
+
+        <div class="action-grid">
+          <button class="icon-button" id="replay" type="button">
+            <span>Replay</span>
+            <small>Space</small>
+          </button>
+          <button class="icon-button" id="reveal" type="button">
+            <span>Reveal</span>
+            <small>R</small>
+          </button>
+          <button class="icon-button" id="next" type="button">
+            <span>Next</span>
+            <small>Enter</small>
+          </button>
+        </div>
+
+        <div class="score-row">
+          <div class="score-pill score-pill--wrong" aria-label="Incorrect">
+            <span>✕</span>
+            <strong id="score-wrong">0</strong>
+          </div>
+          <div class="score-pill score-pill--right" aria-label="Correct">
+            <span>✓</span>
+            <strong id="score-right">0</strong>
+          </div>
+        </div>
+        <p class="status" id="status">Load your notes to begin.</p>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <h2>Note Options</h2>
+          <button class="ghost-button" id="toggle-all" type="button">Select all</button>
+        </div>
+        <div class="note-list" id="note-list" role="list"></div>
+        <p class="hint">
+          Add WAV files to <code>/audio</code> and update <code>notes.json</code> to match
+          the naming scheme like <code>040_E2_S6F0.wav</code>.
+        </p>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

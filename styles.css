@@ -1,0 +1,233 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  background: #43505f;
+  color: #1d2733;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) minmax(280px, 360px);
+  gap: 32px;
+  width: min(960px, 100%);
+}
+
+.trainer-card {
+  background: #eef3f8;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 18px 40px rgba(16, 24, 40, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.trainer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trainer-header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #283041;
+}
+
+.level-badge {
+  background: #2f3a4e;
+  color: #f6f9ff;
+  border-radius: 14px;
+  padding: 8px 14px;
+  text-align: center;
+  min-width: 78px;
+}
+
+.level-badge span {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+}
+
+.level-badge strong {
+  font-size: 1.2rem;
+}
+
+.fretboard-display {
+  background: #f8fbff;
+  border-radius: 18px;
+  padding: 18px;
+  display: grid;
+  gap: 12px;
+  border: 1px solid #dbe4ef;
+}
+
+.fretboard-slot {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e1e7f0;
+}
+
+.fret-label {
+  font-size: 0.85rem;
+  color: #7a869a;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.fretboard-slot strong {
+  font-size: 1.3rem;
+  color: #3a4a6a;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.icon-button {
+  border: none;
+  border-radius: 18px;
+  padding: 16px;
+  background: #f0f5fb;
+  color: #2b3445;
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.icon-button small {
+  font-size: 0.7rem;
+  color: #7c879b;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.icon-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(30, 45, 70, 0.15);
+}
+
+.score-row {
+  display: flex;
+  gap: 16px;
+}
+
+.score-pill {
+  flex: 1;
+  padding: 14px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+}
+
+.score-pill--wrong {
+  background: #ffe7e7;
+  color: #b32727;
+}
+
+.score-pill--right {
+  background: #e3f7e6;
+  color: #1b7b3f;
+}
+
+.status {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #5f6c82;
+}
+
+.panel {
+  background: #f7f9fc;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 12px 32px rgba(17, 24, 39, 0.2);
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.ghost-button {
+  border: 1px solid #cad3e0;
+  border-radius: 999px;
+  padding: 6px 14px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.note-list {
+  display: grid;
+  gap: 12px;
+  max-height: 360px;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+.note-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 10px 14px;
+  border: 1px solid #e2e8f1;
+}
+
+.note-item label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.note-meta {
+  font-size: 0.8rem;
+  color: #6b768a;
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b768a;
+}
+
+@media (max-width: 900px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+}
